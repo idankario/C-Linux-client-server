@@ -44,7 +44,7 @@ int SendClient(int cs) {
 			close(cs);
 			return 0;
 		}
-		
+		printf("client command is: %s \n",buff);
 		/* Open the command for reading. */
 		FILE* fp= popen(buff, "r");
 		/* Read the output a line at a time - output it. */
